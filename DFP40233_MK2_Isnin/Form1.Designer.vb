@@ -47,13 +47,13 @@ Partial Class Form1
         lblTarikh = New Label()
         dtpTarikh = New DateTimePicker()
         dgvData = New DataGridView()
-        BIL = New DataGridViewTextBoxColumn()
-        Nama = New DataGridViewTextBoxColumn()
-        NoTel = New DataGridViewTextBoxColumn()
         BtnCreate = New Button()
         BtnRead = New Button()
         BtnUpdate = New Button()
         BtnDelete = New Button()
+        clnBil = New DataGridViewTextBoxColumn()
+        clnNama = New DataGridViewTextBoxColumn()
+        clnNotel = New DataGridViewTextBoxColumn()
         gbxJantina.SuspendLayout()
         gbxKaedahbayaran.SuspendLayout()
         gbxPerisa.SuspendLayout()
@@ -294,33 +294,12 @@ Partial Class Form1
         ' dgvData
         ' 
         dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvData.Columns.AddRange(New DataGridViewColumn() {BIL, Nama, NoTel})
+        dgvData.Columns.AddRange(New DataGridViewColumn() {clnBil, clnNama, clnNotel})
         dgvData.Location = New Point(431, 407)
         dgvData.Name = "dgvData"
         dgvData.RowHeadersWidth = 51
         dgvData.Size = New Size(391, 82)
         dgvData.TabIndex = 15
-        ' 
-        ' BIL
-        ' 
-        BIL.HeaderText = "Bil"
-        BIL.MinimumWidth = 6
-        BIL.Name = "BIL"
-        BIL.Width = 125
-        ' 
-        ' Nama
-        ' 
-        Nama.HeaderText = "Nama"
-        Nama.MinimumWidth = 6
-        Nama.Name = "Nama"
-        Nama.Width = 125
-        ' 
-        ' NoTel
-        ' 
-        NoTel.HeaderText = "NoTel"
-        NoTel.MinimumWidth = 6
-        NoTel.Name = "NoTel"
-        NoTel.Width = 125
         ' 
         ' BtnCreate
         ' 
@@ -358,9 +337,30 @@ Partial Class Form1
         BtnDelete.Text = "DELETE"
         BtnDelete.UseVisualStyleBackColor = True
         ' 
+        ' clnBil
+        ' 
+        clnBil.HeaderText = "Bil"
+        clnBil.MinimumWidth = 6
+        clnBil.Name = "clnBil"
+        clnBil.Width = 125
+        ' 
+        ' clnNama
+        ' 
+        clnNama.HeaderText = "Nama"
+        clnNama.MinimumWidth = 6
+        clnNama.Name = "clnNama"
+        clnNama.Width = 125
+        ' 
+        ' clnNotel
+        ' 
+        clnNotel.HeaderText = "NoTel"
+        clnNotel.MinimumWidth = 6
+        clnNotel.Name = "clnNotel"
+        clnNotel.Width = 125
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(890, 585)
         Controls.Add(BtnDelete)
@@ -421,12 +421,12 @@ Partial Class Form1
     Friend WithEvents lblTarikh As Label
     Friend WithEvents dtpTarikh As DateTimePicker
     Friend WithEvents dgvData As DataGridView
-    Friend WithEvents BIL As DataGridViewTextBoxColumn
-    Friend WithEvents Nama As DataGridViewTextBoxColumn
-    Friend WithEvents NoTel As DataGridViewTextBoxColumn
     Friend WithEvents BtnCreate As Button
     Friend WithEvents BtnRead As Button
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents BtnDelete As Button
+    Friend WithEvents clnBil As DataGridViewTextBoxColumn
+    Friend WithEvents clnNama As DataGridViewTextBoxColumn
+    Friend WithEvents clnNotel As DataGridViewTextBoxColumn
 
 End Class
